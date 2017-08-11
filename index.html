@@ -10,6 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 	<style>
 		body {
 			font-family: 'Bellefair', serif;
@@ -23,6 +24,14 @@
 		}
 		a:hover {
 			color: #FFAE5D;
+		}
+		.section-heading {
+		    padding-bottom: 14px;
+		    margin-bottom: 14px;
+		    clear: both;
+		}
+		#tech {
+			font-size: 100px;
 		}
 	</style>
   </head>
@@ -43,49 +52,88 @@
 			    </div>
 		  	</div>
 	    </div>
-	 </section>  
-	 
+	 </section>
 	 <div class="container">
-		 <hr><br><br>
-		 <h1 class="text-center">Projects</h1><br><br><br>
+		 <hr><h2 class="section-heading text-center">Projects</h2>
 		 
 		 <div class="row">
+		   
+		   <div class="col-6 col-md-4">
+		     <div class="card">
+		       <div class="card-block">
+		         <h3 class="card-title">Cram.Space</h3>
+		         <p class="card-text">A light scalable URL shortner.</p>
+		         <a href="https://github.com/vshelke/cram.space" class="btn" style="color: #9F6164;"><i class="fa fa-github fa-2x"></i></a>
+		         <a href="http://cram.space/" class="btn" style="color: #9F6164;"><i class="fa fa-external-link"></i></i></a>
+				 <div class="text-right" style="margin-top: -50px;">
+				 	<i class="devicon-php-plain colored" style="font-size: 40px;"></i>
+				</div>
+		       </div>
+		     </div>
 			 
-			 <div class="col">
-				 <div class="card">
-		  	 		<img class="card-img-top" src="img/morse.png" alt="Card image cap">
-		  			<div class="card-block">
-		    			<h4 class="card-title">Morse Generator</h4>
-		    			<p class="card-text">It is a simple program that converts raw string to morse code on the bases of tree traversal. It forms a morse code tree which helps in conversion and vice verse.</p>
-		    			<a href="https://github.com/vshelke/morse-generator" class="btn" style="background-color: color: #9F6164;"><i class="fa fa-github fa-2x"></i></a>
-		  	  		</div>
+		 </div>
+		   
+		   <div class="col-6 col-md-4">
+		     <div class="card">
+		       <div class="card-block">
+		         <h3 class="card-title">Game of Life</h3>
+		         <p class="card-text">This is a zero-player game which works on the four rules given by John Horton Conway.</p>
+		         <a href="https://github.com/vshelke/game-of-life" class="btn" style="color: #9F6164;"><i class="fa fa-github fa-2x"></i></a>
+				 <div class="text-right" style="margin-top: -50px;">
+				 	<i class="devicon-java-plain colored" style="font-size: 40px;"></i>
 				</div>
-			</div>
-			
-	 	   	<div class="col">
-				<div class="card">
-		  			<img class="card-img-top" src="https://raw.githubusercontent.com/vshelke/game-of-life/master/gif/bench.gif" alt="Card image cap">
-		  			<div class="card-block">
-		    			<h4 class="card-title">Game of Life</h4>
-		    			<p class="card-text">This is a zero-player game which works on the four rules given by John Horton Conway.</p>
-	    				<a href="https://github.com/vshelke/game-of-life" class="btn" style="background-color: color: #9F6164;"><i class="fa fa-github fa-2x"></i></a>
-		    		</div>
-				</div>
-			</div>
-			
-			<div class="col">
-				<br>
-				<div class="card">
-		  	 	   <img class="card-img-top" src="https://raw.githubusercontent.com/vshelke/10k-talk/master/out.gif" alt="Card image cap">
-		  			<div class="card-block">
-		    			<h4 class="card-title">Chat Program</h4>
-		    			<p class="card-text">It is simple desktop chat application written in java which is light weight and portable. You can use it on your LAN and even WAN (port forwarding necessary :P )</p>
-    					<a href="https://github.com/vshelke/10k-talk" class="btn" style="background-color: color: #9F6164;"><i class="fa fa-github fa-2x"></i></a>
-		    		</div>
-				</div>
-			</div>
-		</div>
-		<br><hr><br>
+		       </div>
+		     </div>
+		   </div>
+		   
+		   <div class="col-6 col-md-4">
+		     <div class="card">
+		       <div class="card-block">
+		         <h3 class="card-title">Chat Program</h3>
+		         <p class="card-text">It is simple desktop chat application written in java which is light weight and portable. You can use it on your LAN.</p>
+		         <a href="https://github.com/vshelke/game-of-life" class="btn" style="color: #9F6164;"><i class="fa fa-github fa-2x"></i></a>
+ 				 <div class="text-right" style="margin-top: -50px;">
+ 				 	<i class="devicon-java-plain colored" style="font-size: 40px;"></i>
+ 				</div>
+		       </div>
+		     </div>
+		   </div>
+		   
+		   
+		   <div class="col-6 col-md-4">
+		     <div class="card">
+		       <div class="card-block">
+		         <h3 class="card-title">Randomusik</h3>
+		         <p class="card-text">A music website built from scratch where user can upload his favourite songs and create playlist.</p>
+		         <a href="https://github.com/vshelke/randomusik" class="btn" style="color: #9F6164;"><i class="fa fa-github fa-2x"></i></a>
+				 <a href="http://randomusik.com/" class="btn" style="color: #9F6164;"><i class="fa fa-external-link"></i></i></a>
+ 				 <div class="text-right" style="margin-top: -50px;">
+					 <i class="devicon-python-plain" style="font-size: 40px;"></i>
+	 				 <img src="http://flask.pocoo.org/static/logo/flask.svg" style="margin-top: -30px;" width=60 height=25 data-toggle="tooltip" title="Flask">
+ 				</div>
+		       </div>
+		     </div>
+		   </div>
+		   
+		   
+		 </div>
+		 
+		 <hr><h2 class="section-heading text-center">I am good at</h2>
+		 <div class="row">
+			 <div id="tech" class="col text-center">
+			 	<i class="devicon-cplusplus-plain colored" data-toggle="tooltip" title="C++"></i>
+				<i class="devicon-python-plain" data-toggle="tooltip" title="Python3"></i>
+				<img src="http://flask.pocoo.org/static/logo/flask.svg" style="margin-top: -55px;" width=160 height=70 data-toggle="tooltip" title="Flask">
+				<i class="devicon-django-plain colored" data-toggle="tooltip" title="Django"></i>
+				<i class="devicon-heroku-plain-wordmark colored" data-toggle="tooltip" title="Heroku"></i>
+				<i class="devicon-javascript-plain colored" data-toggle="tooltip" title="JavaScript(ES6)"></i>
+				<!-- <i class="devicon-react-original colored" data-toggle="tooltip" title="React"></i> -->
+				<i class="devicon-git-plain colored" data-toggle="tooltip" title="Git"></i>
+				<i class="devicon-mysql-plain colored" data-toggle="tooltip" title="MySQL"></i>
+			 </div>
+		 </div>
+		 
+		 <hr>
 		<p class="text-muted text-center">Made with <i class="fa fa-heart" aria-hidden="true"></i> by @<a href="https://github.com/vshelke">vshelke</a></p><br>
 	 </div>
 	 
