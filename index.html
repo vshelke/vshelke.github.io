@@ -87,7 +87,7 @@
             $('[data-toggle="tooltip"]').tooltip()
         });
         $("#spamSafe").on('click', function() {
-            $.get("_.json", function(data) {
+            $.get("obsf.json", function(data) {
                 window.location.href = "mailto:".concat(data._);
             })
         })
