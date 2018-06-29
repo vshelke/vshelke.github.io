@@ -1,112 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Home
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Personal website">
-    <meta name="author" content="vshelke">
-    <title>Vaibhav Shelke</title>
-    <meta property="og:title" content="Vaibhav Shelke" />
-    <meta property="og:type" content="Personal Website" />
-    <meta property="og:url" content="http://vshelke.me" />
-    <meta property="og:image" content="http://vshelke.me/img/dp.jpeg" />
-    <meta name="twitter:card" content="Vaibhav Shelke" />
-    <meta name="twitter:creator" content="@vaibhav3301" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="fav/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="fav/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="fav/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="fav/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="fav/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="fav/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="fav/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="fav/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="fav/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="fav/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="fav/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="fav/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="fav/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="&nbsp;" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-    <style>
-        body {
-            font-family: 'Bellefair', serif;
-            background-color: #F8F8F2;
-        }
+{% for post in paginator.posts %}
+<div class="posts">
+  <h1>
+    <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+  </h1>
+  {% if post.image %}
+  <div class="thumbnail-container">
+    <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
+  </div>
+  {% endif %}
+  <p>
+    {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
+  </p>
+</div>
+{% endfor %}
 
-        .jumbotron {
-            background-color: transparent;
-        }
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-button pagination-active" href="{{ site.github.url }}{{ paginator.next_page_path }}" class="next">{{ site.data.settings.pagination.previous_page }}</a>
+  {% else %}
+    <span class="pagination-button">{{ site.data.settings.pagination.previous_page }}</span>
+  {% endif %}
 
-        a, #spamSafe {
-            color: #9F6164;
-        }
-
-        a:hover, #spamSafe:hover {
-            color: #FFAE5D;
-        }
-
-    </style>
-</head>
-
-<body>
-    <section class="jumbotron text-center">
-        <div class="container">
-            <img src="img/dp.jpeg" class="img-thumbnail" alt="dp" width="450" height="450"><br><br>
-            <h1 class="jumbotron-heading">Vaibhav Shelke</h1><br>
-            <p class="lead text-muted">JavaScript Developer . Software Engineer . AI Enthusiast</p><br>
-            <div class="container">
-                <div class="row">
-                    <div class="col-6 col-sm-3"><a href="https://github.com/vshelke" target="_blank"><i class="fa fa-github fa-3x" data-toggle="tooltip" title="GitHub"></i></a></div>
-                    <div class="col-6 col-sm-3"><a href="https://www.linkedin.com/in/vshelke/" target="_blank"><i class="fa fa-linkedin-square fa-3x" data-toggle="tooltip" title="LinkedIn"></i></a></div>
-                    <div class="col-6 col-sm-3"><a href="VaibhavShelke.pdf" target="_blank"><i class="fa fa-folder fa-3x" data-toggle="tooltip" title="Résumé"></i></i></a></div>
-                    <div class="col-6 col-sm-3"><i id="spamSafe" class="fa fa-envelope fa-3x" data-toggle="tooltip" title="Click to Mail"></i></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>  
-    <script 
-    src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" 
-    integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" 
-    crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(function() {
-            $('[data-toggle="tooltip"]').tooltip()
-        });
-        $("#spamSafe").on('click', function() {
-            $.get("obsf.json", function(data) {
-                window.location.href = "mailto:".concat(data._);
-            })
-        })
-    </script>
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-104768951-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-</body>
-
-</html>
+  {% if paginator.previous_page %}
+    <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
+  {% else %}
+    <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
+  {% endif %}
+</div>
