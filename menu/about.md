@@ -3,11 +3,11 @@ layout: page
 title: About me!
 ---
 
-I am a Software Engineer from India. I love reading about new technologies and things that i dont understand. I love philosophy and a tiny bit of maths. In my free time you can find me build some useless things which i hope someone someday in some parallel universe will use it.
+I am a Software Engineer from India. I am very curious about the things i dont understand. I like philosophy and maths. I like to read books especially real life stories. In my free time you can find me build something or listening to my favourite music [playlist](https://goo.gl/DhL9S3).
 
 ### About this blog
 
-So i have started this blog to write about things that interests me alot and maybe it will include some philosophy and maybe tiny bit of interesting problem solving. Its mainly the `logs.md` of my everyday thoughts and experiences.
+So i have started this blog to write about things that interests me alot and some posts on philosophy. Its mainly the `logs.md` of my everyday thoughts and experiences.
 
 ### About the content
 
