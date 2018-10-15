@@ -9,8 +9,8 @@
     <title>Vaibhav Shelke</title>
     <meta property="og:title" content="Vaibhav Shelke" />
     <meta property="og:type" content="Personal Website" />
-    <meta property="og:url" content="http://vshelke.me" />
-    <meta property="og:image" content="http://vshelke.me/img/dp.jpeg" />
+    <meta property="og:url" content="https://vshelke.github.io" />
+    <meta property="og:image" content="https://avatars0.githubusercontent.com/u/15365654" />
     <meta name="twitter:card" content="Vaibhav Shelke" />
     <meta name="twitter:creator" content="@vaibhav3301" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -60,9 +60,9 @@
 <body>
     <section class="jumbotron text-center">
         <div class="container">
-            <img src="img/dp.jpeg" class="img-thumbnail" alt="dp" width="450" height="450"><br><br>
-            <h1 class="jumbotron-heading">Vaibhav Shelke</h1><br>
-            <p class="lead text-muted">Python Developer . Software Engineer . AI Enthusiast</p><br>
+            <img src="https://avatars0.githubusercontent.com/u/15365654" class="img-thumbnail" alt="dp" width="400" height="400"><br><br>
+            <h1 class="jumbotron-heading"></h1><br>
+            <p class="lead text-muted"></p><br>
             <div class="container">
                 <div class="row">
                     <div class="col-6 col-sm-3"><a href="https://github.com/vshelke" target="_blank"><i class="fa fa-github fa-3x" data-toggle="tooltip" title="GitHub"></i></a></div>
@@ -90,7 +90,13 @@
             $.get("obsf.json", function(data) {
                 window.location.href = "mailto:".concat(data._);
             })
-        })
+        });
+        $.get("https://api.github.com/users/vshelke", 
+            function(data) {
+                $(".jumbotron-heading").html(data.name).css({opacity: 0.0, visibility: "visible"}).animate({opacity: 1.0});;
+                $(".lead").html(data.bio).css({opacity: 0.0, visibility: "visible"}).animate({opacity: 1.0});;
+            }
+        );
     </script>
     <script>
         (function(i, s, o, g, r, a, m) {
